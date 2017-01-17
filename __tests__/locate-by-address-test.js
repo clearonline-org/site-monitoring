@@ -9,10 +9,10 @@ const SiteMonitoring = require('../index');
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // 10 second timeout
 
 describe('Lookup server location by address', () => {
-    it('Create instance', () => {
-        let siteMonitoring = new SiteMonitoring(); 
-        return expect(siteMonitoring).toBeInstanceOf(SiteMonitoring);
-    });
+    // it('Create instance', () => {
+    //     let siteMonitoring = new SiteMonitoring(); 
+    //     return expect(siteMonitoring).toBeInstanceOf(SiteMonitoring);
+    // });
 
     /**
      * get running server ip 
