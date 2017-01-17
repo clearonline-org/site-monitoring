@@ -1,19 +1,24 @@
 {
   "name": "site-monitoring",
   "version": "1.0.0",
-  "description": "find geo locations of links present on a website",
+  "description": "find geo locations a given website",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "author": "Marcellin Nshimiyimana",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clearonline-org/site-monitoring.git"
+  },
   "dependencies": {
     "external-ip": "^0.2.4",
     "ip": "^1.1.4",
     "js-crawler": "^0.3.15",
     "public-ip": "^2.0.1",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "jest": "^18.1.0"
