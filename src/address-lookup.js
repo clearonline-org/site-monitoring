@@ -16,10 +16,10 @@ class AddressLookup {
     }
     initializeLogger() {
         this.LOGGER = new winston.Logger({
-            level: 'verbose',
+            level: 'debug',
             transports: [
                 new (winston.transports.Console)({
-                level: 'verbose',
+                level: 'debug',
                 handleExceptions: true,
                 json: true
                 })
@@ -41,7 +41,7 @@ class AddressLookup {
 
                 // dns.resolve
                 let names = yield alInstance.addressToNames(address);
-                    alInstance.LOGGER.debug(names);
+                alInstance.LOGGER.debug('address lookup - search', names);
 
                 for (let j = 0; j < names.length; j++) {
                     let name = names[j];

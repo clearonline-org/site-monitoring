@@ -16,10 +16,10 @@ class DomainLookup {
     }
     initializeLogger() {
         this.LOGGER = new winston.Logger({
-            level: 'verbose',
+            level: 'debug',
             transports: [
                 new (winston.transports.Console)({
-                level: 'verbose',
+                level: 'debug',
                 handleExceptions: true,
                 json: true
                 })

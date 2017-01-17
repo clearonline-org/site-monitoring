@@ -26,6 +26,7 @@ describe('Lookup server location by address', () => {
         // return siteMonitoring.locateByAddress(ip)
         .then(result => {
             // result = { origin, destination }
+            console.log('result', result);
             expect(result).toBeDefined();
             // origin = { region_code, latitude, longitude }
             expect(result.origin).toBeDefined();

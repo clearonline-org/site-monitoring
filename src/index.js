@@ -134,17 +134,17 @@ class SiteMonitoring {
 
         return this.locateOrigin()
         .then(origin => {
-        this.LOGGER.debug(origin);           
+        this.LOGGER.debug('index.locateByAddress - origin', origin);           
             result.origin = origin;
             return this.addressLookup.search(address);
         })
         .then(destination => {
-        this.LOGGER.debug(destination);           
+        this.LOGGER.debug('index.locateByAddress - destination', destination);           
             result.destination = destination;            
             return result;
         })
         .catch(e => {
-            this.LOGGER.error(e);            
+            this.LOGGER.error('index.locateByAddress - e', e);            
             return result;
         });
 
