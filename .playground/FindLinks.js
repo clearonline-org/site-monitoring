@@ -4,6 +4,8 @@
 * @Last modified by:   mars
 * @Last modified time: 2017-01-11T00:24:14-05:00
 */
+	'use strict';
+
 var Crawler = require("js-crawler");
 
 var crawler = new Crawler().configure({ignoreRelative: true, depth: 1});
