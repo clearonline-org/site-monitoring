@@ -13,7 +13,7 @@ class AddressLookup {
             this.initializeLogger();
         }
     }
-    initializeLogger(debug) {
+    initializeLogger() {
         this.LOGGER = new winston.Logger({
             level: 'verbose',
             transports: [
@@ -47,7 +47,7 @@ class AddressLookup {
                     let innerAddresses = yield alInstance.nameToAddresses(name);
                      
                     // input address should also be used if not mapped (by alInstance.nameToAddresses)
-                    if(!innerAddresses.find(ia => ia === address)) {
+                    if(!innerAddresses.includes(address)) {
                         innerAddresses.push(address);
                     }
                     let locationList = yield alInstance.addressesToLocation(innerAddresses);
@@ -66,7 +66,7 @@ class AddressLookup {
      * @return { Array<string> } domain names that map to this ip
      */
     addressToNames(address) {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
 
             dns.reverse(address, (err, hostnames) => {
 

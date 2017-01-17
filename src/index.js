@@ -82,6 +82,7 @@ class SiteMonitoring {
             return result;
         })
         .catch(e => {
+            this.LOGGER.error(e);            
             return result;
         });
 
