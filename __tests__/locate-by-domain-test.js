@@ -33,6 +33,10 @@ describe('Lookup server location by domain', () => {
             // destination = [ { region_code, latitude, longitude } ]
            return expect(result.destination).toBeInstanceOf(Array);
 
+        })
+        .catch(e => {
+            expect(e).toBeNull();
+            return expect(e).toBeInstanceOf(Error);           
         });
     });
 });
