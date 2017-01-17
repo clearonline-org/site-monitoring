@@ -1,6 +1,6 @@
 {
   "name": "site-monitoring",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find geo locations a given website",
   "main": "index.js",
   "scripts": {
