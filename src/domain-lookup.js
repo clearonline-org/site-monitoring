@@ -40,7 +40,7 @@ class DomainLookup {
         .then(names => this.namesToAddress(names))
         .then(addresses => {
             addresses.forEach(address => {
-                if(!addressList.find(a => a === address)) {
+                if(!addressList.includes(address)) {
                     addressList.push(address);
                 }
             });

@@ -77,7 +77,7 @@ class AddressLookup {
 
                 let holder = [];
                 hostnames.forEach(hostname => {
-                    if(!holder.find(h => h === hostname)){
+                    if(!holder.includes(hostname)){
                         holder.push(hostname);
                     }
                 });
