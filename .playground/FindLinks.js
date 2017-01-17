@@ -9,7 +9,7 @@ var Crawler = require("js-crawler");
 var crawler = new Crawler().configure({ignoreRelative: true, depth: 1});
 
 crawler.crawl({
-  url: "http://marcellin.me",
+  url: "http://clearonline.org",
   success: function(page) {
     console.log(page.url, page.response);
   },
