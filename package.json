@@ -1,0 +1,21 @@
+{
+  "name": "site-monitoring",
+  "version": "1.0.0",
+  "description": "find geo locations of links present on a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Marcellin Nshimiyimana",
+  "license": "ISC",
+  "dependencies": {
+    "external-ip": "^0.2.4",
+    "ip": "^1.1.4",
+    "js-crawler": "^0.3.15",
+    "public-ip": "^2.0.1",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "jest": "^18.1.0"
+  }
+}
