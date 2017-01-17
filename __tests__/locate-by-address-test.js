@@ -5,7 +5,7 @@
  */
 
 const SiteMonitoring = require('../index');
-const publicIp = require('public-ip');
+// const publicIp = require('public-ip');
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // 10 second timeout
 
 describe('Lookup server location by address', () => {
@@ -22,7 +22,9 @@ describe('Lookup server location by address', () => {
         let debug = true;
         let siteMonitoring = new SiteMonitoring(debug); 
 
-        return publicIp.v4().then(ip => siteMonitoring.locateByAddress(ip))
+        // return publicIp.v4().then(ip => siteMonitoring.locateByAddress(ip))
+        let ip = '172.217.4.68';
+        return siteMonitoring.locateByAddress(ip)
         .then(result => {
             // result = { origin, destination }
             expect(result).toBeDefined();
