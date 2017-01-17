@@ -1,4 +1,4 @@
-	'use strict';
+'use strict';
 
 /**
  * 
@@ -6,6 +6,7 @@
 
 const SiteMonitoring = require('../index');
 const publicIp = require('public-ip');
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // 10 second timeout
 
 describe('Lookup server location by address', () => {
     it('Create instance', () => {

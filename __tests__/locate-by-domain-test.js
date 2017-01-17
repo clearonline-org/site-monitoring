@@ -3,6 +3,7 @@
 /**
  * 
  */
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // 10 second timeout
 
 const SiteMonitoring = require('../index');
 const publicIp = require('public-ip');
