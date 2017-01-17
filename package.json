@@ -1,7 +1,7 @@
 {
   "name": "site-monitoring",
-  "version": "1.0.0",
-  "description": "find geo locations a given website",
+  "version": "1.0.1",
+  "description": "Find geo locations a given website",
   "main": "index.js",
   "scripts": {
     "test": "jest"
