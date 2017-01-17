@@ -84,11 +84,6 @@ class SiteMonitoring {
                     level: 'debug',
                     handleExceptions: true,
                     json: true
-                }),
-                new (winston.transports.Console)({
-                    level: 'info',
-                    handleExceptions: true,
-                    json: true
                 })
             ]
         });
