@@ -41,6 +41,7 @@ class AddressLookup {
 
                 // dns.resolve
                 let names = yield alInstance.addressToNames(address);
+                    alInstance.LOGGER.debug(names);
 
                 for (let j = 0; j < names.length; j++) {
                     let name = names[j];

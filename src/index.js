@@ -78,10 +78,15 @@ class SiteMonitoring {
     }
     initializeLogger() {
         this.LOGGER = new winston.Logger({
-            level: 'verbose',
+            level: 'debug',
             transports: [
                 new (winston.transports.Console)({
-                    level: 'verbose',
+                    level: 'debug',
+                    handleExceptions: true,
+                    json: true
+                }),
+                new (winston.transports.Console)({
+                    level: 'info',
                     handleExceptions: true,
                     json: true
                 })
@@ -130,13 +135,16 @@ class SiteMonitoring {
         let origin = null;
         let destination = [];
         let result = { origin, destination };
+        this.LOGGER.debug(address);           
 
         return this.locateOrigin()
         .then(origin => {
+        this.LOGGER.debug(origin);           
             result.origin = origin;
             return this.addressLookup.search(address);
         })
         .then(destination => {
+        this.LOGGER.debug(destination);           
             result.destination = destination;            
             return result;
         })

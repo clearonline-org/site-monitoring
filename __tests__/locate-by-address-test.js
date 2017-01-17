@@ -22,9 +22,8 @@ describe('Lookup server location by address', () => {
         let debug = true;
         let siteMonitoring = new SiteMonitoring(debug); 
 
-        // return publicIp.v4().then(ip => siteMonitoring.locateByAddress(ip))
+        return publicIp.v4().then(ip => siteMonitoring.locateByAddress(ip))
         // return siteMonitoring.locateByAddress(ip)
-        return publicIp.v4()
         .then(result => {
             // result = { origin, destination }
             expect(result).toBeDefined();
@@ -33,10 +32,6 @@ describe('Lookup server location by address', () => {
             // destination = [ { region_code, latitude, longitude } ]
             return expect(result.destination).toBeInstanceOf(Array);
 
-        })
-        .catch(e => {
-            expect(e).toBeNull();
-            return expect(e).toBeInstanceOf(Error);           
         });
     });
 });
