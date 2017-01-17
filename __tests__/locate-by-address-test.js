@@ -10,7 +10,7 @@ const publicIp = require('public-ip');
 describe('Lookup server location by address', () => {
     it('Create instance', () => {
         let siteMonitoring = new SiteMonitoring(); 
-        expect(siteMonitoring).toBeInstanceOf(SiteMonitoring);
+        return expect(siteMonitoring).toBeInstanceOf(SiteMonitoring);
     });
 
     /**
@@ -28,7 +28,7 @@ describe('Lookup server location by address', () => {
             // origin = { region_code, latitude, longitude }
             expect(result.origin).toBeDefined();
             // destination = [ { region_code, latitude, longitude } ]
-            expect(result.destination).toBeInstanceOf(Array);
+            return expect(result.destination).toBeInstanceOf(Array);
 
         });
     });

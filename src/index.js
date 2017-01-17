@@ -1,5 +1,6 @@
 'use strict';
 
+global.Promise = require.requireActual('promise');
 
 if (!Array.prototype.includes) {
   Object.defineProperty(Array.prototype, 'includes', {

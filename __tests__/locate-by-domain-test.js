@@ -31,7 +31,7 @@ describe('Lookup server location by domain', () => {
             // origin = { region_code, latitude, longitude }
             expect(result.origin).toBeDefined();
             // destination = [ { region_code, latitude, longitude } ]
-            expect(result.destination).toBeInstanceOf(Array);
+           return expect(result.destination).toBeInstanceOf(Array);
 
         });
     });
