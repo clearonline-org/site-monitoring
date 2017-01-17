@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "author": "Marcellin Nshimiyimana",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/clearonline-org/site-monitoring.git"
