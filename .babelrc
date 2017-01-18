@@ -2,16 +2,7 @@
   "presets": ["es2015", "stage-0"],
   "env": {
     "production": {
-      "presets": ["es2015", "stage-0", "babili"],
-      "plugins": [ ["transform-runtime", {"moduleName": "babel-runtime"}] ]
+      "presets": ["es2015", "stage-0", "babili"]
     }
-  },
-  "plugins": [
-    ["transform-runtime", {
-      "helpers": true, // defaults to true
-      "polyfill": true, // defaults to true
-      "regenerator": true, // defaults to true
-      "moduleName": "babel-runtime" // defaults to "babel-runtime"
-    }]
-  ]
+  }
 }
