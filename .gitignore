@@ -1,1 +1,3 @@
 node_modules
+# .gitignore - the files to not push via git
+lib

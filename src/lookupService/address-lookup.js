@@ -1,13 +1,13 @@
 'use strict';
-const winston = require('winston');
+import winston from 'winston';
 
 
-const dns = require('dns');
+import dns from 'dns';
 
-const Q = require('q');
-const iplocation = require('iplocation');
+import Q from 'q';
+import iplocation from 'iplocation';
 
-class AddressLookup {
+export default class AddressLookup {
     constructor(debug){
         this.LOGGER = new winston.Logger();
         if(!!debug) {
@@ -19,9 +19,9 @@ class AddressLookup {
             level: 'debug',
             transports: [
                 new (winston.transports.Console)({
-                level: 'debug',
-                handleExceptions: true,
-                json: true
+                    level: 'debug',
+                    handleExceptions: true,
+                    json: true
                 })
             ]
         });
@@ -159,4 +159,4 @@ class AddressLookup {
 
 }
 
-module.exports = AddressLookup;
+// export { AddressLookup };

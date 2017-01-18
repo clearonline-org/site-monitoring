@@ -1,12 +1,12 @@
 'use strict';
 
-const winston = require('winston');
+import winston from 'winston';
 
-const Q = require('q');
+import Q from 'q';
 
-const AddressLookup = require('./address-lookup');
+import AddressLookup from './address-lookup';
 
-class DomainLookup {
+export default class DomainLookup {
     constructor(debug) {
         this.addressLookup = new AddressLookup(debug);
         this.LOGGER = new winston.Logger();
@@ -105,4 +105,5 @@ class DomainLookup {
 
     }
 }
-module.exports = DomainLookup;
+
+// export { DomainLookup };
