@@ -1,5 +1,4 @@
 'use strict';
-import 'babel-polyfill';
 import SiteMonitoring from './lookupService/index';
 
 export default SiteMonitoring;
