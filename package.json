@@ -5,8 +5,8 @@
   "main": "lib/main.js",
   "scripts": {
     "test": "npm run compile-production && jest",
-    "compile": "babel --presets es2015,stage-0 -d lib src/",
-    "compile-production": "BABEL_ENV=production babel --presets es2015,stage-0 -d lib src/",
+    "compile": "babel -d lib src/",
+    "compile-production": "BABEL_ENV=production babel -d lib src/",
     "prepublish": "npm run compile-production"
   },
   "author": "Marcellin Nshimiyimana",
