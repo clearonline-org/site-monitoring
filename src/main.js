@@ -1,7 +1,8 @@
 'use strict';
 import SiteMonitoring from './lookupService/index';
-// export let SiteMonitoring = SiteMonitoringInput;
 
 export default SiteMonitoring;
+
+// this part is to ensure that 'SiteMonitoring' is exported as main entry class
 module.exports = SiteMonitoring;
 module.exports.SiteMonitoring = SiteMonitoring;

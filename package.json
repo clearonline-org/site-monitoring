@@ -4,9 +4,10 @@
   "description": "Find geo locations a given website",
   "main": "lib/main.js",
   "scripts": {
-    "test": "npm run compile && jest",
+    "test": "npm run compile-production && jest",
     "compile": "babel --presets es2015,stage-0 -d lib src/",
-    "prepublish": "npm run compile"
+    "compile-production": "BABEL_ENV=production babel --presets es2015,stage-0 -d lib src/",
+    "prepublish": "npm run compile-production"
   },
   "author": "Marcellin Nshimiyimana",
   "license": "MIT",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-preset-babili": "0.0.10",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "jest": "^18.1.0"

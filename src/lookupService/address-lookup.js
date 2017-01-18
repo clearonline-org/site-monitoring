@@ -158,5 +158,3 @@ export default class AddressLookup {
     }
 
 }
-
-// export { AddressLookup };

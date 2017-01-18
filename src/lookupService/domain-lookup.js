@@ -105,5 +105,3 @@ export default class DomainLookup {
 
     }
 }
-
-// export { DomainLookup };
