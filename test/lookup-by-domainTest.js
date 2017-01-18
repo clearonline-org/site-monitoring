@@ -1,4 +1,4 @@
-const SiteMonitoring = require('../index');
+const SiteMonitoring = require('../lib/main');
 let debug = true;
 let siteMonitoring = new SiteMonitoring(debug); 
 

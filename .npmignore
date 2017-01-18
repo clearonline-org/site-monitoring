@@ -1,2 +1,12 @@
 # .npmignore - the files to not push to NPM
+DESIGN.md
 src/
+__tests__
+.playground
+test
+
+
+.babelrc
+.gitignore
+.jshintrc
+.travis.yml
