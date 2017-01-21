@@ -5,7 +5,7 @@ let siteMonitoring = new SiteMonitoring(debug);
 
 siteMonitoring.locateIp('31.13.74.00')
 .then(result => {
-    // result = { longitude, latitude ... }
+    // result = { region_code, latitude, longitude ... }
     console.log('result', result);
   // origin = { region_code, latitude, longitude }
     console.log('origin', result.longitude);
