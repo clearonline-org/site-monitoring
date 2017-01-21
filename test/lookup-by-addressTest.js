@@ -3,7 +3,7 @@ const SiteMonitoring = require('../lib/main');
 let debug = false;
 let siteMonitoring = new SiteMonitoring(debug); 
 
-siteMonitoring.locateByAddress('31.13.74.36')
+siteMonitoring.locateByAddress('31.13.74.00')
 .then(result => {
     // result = { origin, destination }
     console.log('result', result);

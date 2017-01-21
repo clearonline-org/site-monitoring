@@ -90,7 +90,7 @@ export default class AddressLookup {
 
             });
 
-        });
+        }).catch(e => []);
     }
 
     /**
@@ -109,7 +109,7 @@ export default class AddressLookup {
                 return resolve(addresses);
 
             });
-        });
+        }).catch(e => []);
 
     }
 
@@ -154,7 +154,7 @@ export default class AddressLookup {
                 return resolve(location);
             });
 
-        });
+        }).catch(e => null);
     }
 
 }

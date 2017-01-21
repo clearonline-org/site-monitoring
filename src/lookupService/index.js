@@ -33,10 +33,17 @@ export default class SiteMonitoring {
     }
 
     /**
+     * find location of a given ip address
+     * @return { countryCode ... }
+     */
+    locateIp(ip) {
+        return !ip? {} : this.addressLookup.addressToLocation(ip);
+    }
+    /**
      * find out the location info of the computer running this code
      */
     locateOrigin() {
-        return publicIp.v4().then(ip => this.addressLookup.addressToLocation(ip));
+        return publicIp.v4().then(ip => this.locateIp(ip));
     }
 
     /**
