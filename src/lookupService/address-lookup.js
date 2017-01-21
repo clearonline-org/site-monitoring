@@ -90,7 +90,7 @@ export default class AddressLookup {
 
             });
 
-        }).catch(e => []);
+        }).catch(e => { this.LOGGER.error(e); return []; });
     }
 
     /**
@@ -109,7 +109,7 @@ export default class AddressLookup {
                 return resolve(addresses);
 
             });
-        }).catch(e => []);
+        }).catch(e => { this.LOGGER.error(e); return []; });
 
     }
 
@@ -154,7 +154,7 @@ export default class AddressLookup {
                 return resolve(location);
             });
 
-        }).catch(e => null);
+        }).catch(e => { this.LOGGER.error(e); return null; });
     }
 
 }

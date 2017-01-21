@@ -24,10 +24,8 @@ describe('Lookup server location by address', () => {
             // result = { region_code, latitude, longitude ... }
             console.log('result', result);
             expect(result).toBeDefined();
-            // origin = { region_code, latitude, longitude }
-            expect(result.latitude).toBeDefined();
-            // destination = [ { region_code, latitude, longitude } ]
-            return expect(result.latitude).toBeDefined();
+            expect(result.latitude).toBeInstanceOf(String);
+            return expect(result.latitude).toBeInstanceOf(String);
 
         });
     });
