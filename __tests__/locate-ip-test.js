@@ -24,8 +24,8 @@ describe('Lookup server location by address', () => {
             // result = { region_code, latitude, longitude ... }
             console.log('result', result);
             expect(result).toBeDefined();
-            expect(result.latitude).toBeInstanceOf(String);
-            return expect(result.latitude).toBeInstanceOf(String);
+            expect(result.latitude).toBeDefined();
+            return expect(result.latitude).toBeDefined();
 
         });
     });

@@ -1,6 +1,6 @@
 
 const SiteMonitoring = require('../lib/main');
-let debug = false;
+let debug = true;
 let siteMonitoring = new SiteMonitoring(debug); 
 
 siteMonitoring.locateIp('31.13.74.00')
